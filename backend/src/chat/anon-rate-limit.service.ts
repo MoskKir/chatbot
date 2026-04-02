@@ -11,10 +11,9 @@ export class AnonRateLimitService {
     private prisma: PrismaService,
     private config: ConfigService,
   ) {
-    this.limit = this.config.get<number>('ANON_MESSAGE_LIMIT', 3);
-    this.windowMs = this.config.get<number>(
-      'ANON_RATE_LIMIT_WINDOW_MS',
-      24 * 60 * 60 * 1000, // 24 hours
+    this.limit = Number(this.config.get('ANON_MESSAGE_LIMIT', 3));
+    this.windowMs = Number(
+      this.config.get('ANON_RATE_LIMIT_WINDOW_MS', 24 * 60 * 60 * 1000),
     );
   }
 
