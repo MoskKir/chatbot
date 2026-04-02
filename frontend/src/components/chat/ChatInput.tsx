@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, useEffect, useMemo } from "react"
+import { useState, useRef, useCallback, useEffect } from "react"
 import { toast } from "sonner"
 import { ArrowUp, Square, Paperclip, X, FileText } from "lucide-react"
 import { cn } from "@/lib/utils"
